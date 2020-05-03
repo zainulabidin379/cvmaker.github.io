@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV Maker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!---------------------------------------Header--------------------------------------------------->
+<header id="header">
+	<h1 class="text-center">HTML</h1>
+</header>
+
+<!---------------------------------------Navigation Bar--------------------------------------------------->
+<section id="navbar">
+	<div class="nav">
+	  <input type="checkbox" id="nav-check">
+	  <div class="nav-btn">
+	    <label for="nav-check">
+	      <span></span>
+	      <span></span>
+	      <span></span>
+	    </label>
+	  </div>
+	  
+	  <div class="nav-links">
+	    <a href="#">Home</a>
+	    <a href="#">CV Builder</a>
+	    <a href="#">About</a>
+	    <a href="#">Contact</a>
+	  </div>
+	  <div class="nav-links-left float-right ml-auto">
+	    <a href="#">Login</a>
+	    <a href="#">Sign Up</a>
+	  </div>
+	</div>
+</section>
+
+<!---------------------------------------Main section--------------------------------------------------->
+<section id="main">
+	<div class="container">
+		<div class="row main_container_div">
+			<div class="col-md-3">
+				<img src="1.jpg">
+			</div>
+
+			<div class="col-md-9">
+				<form class="form" method="post" action="view_cv.html" target="_blank">
+					<div class="form_wrapper">
+						<div id="personal_info"><h3><i class="fa fa-address-book"></i> Personal Information</h3>
+						<input type="text" class="input" name="name" value="" placeholder="Full Name" required>
+						<input type="text" class="input" name="fname" value="" placeholder="Father Name" required>
+						  <fieldset  required>
+							<div class="toggle">
+								<legend>Gender: </legend>
+								<input type="radio" name="sizeBy" id="sizeWeight" required/>
+								<label for="sizeWeight">Male</label>
+								<input type="radio" name="sizeBy" id="sizeDimensions" required/>
+								<label for="sizeDimensions">Female</label>
+							</div>
+						</fieldset>
+						<input type="email" class="input" name="email" value="" placeholder="Email Address" required>
+						<input type="tel" class="input" name="phone" value="" placeholder="Contact Number" required>
+						<input type="text" class="input" name="address" value="" placeholder="Postal Address" required>
+						<input type="url" class="input" name="website" value="" placeholder="Website"></div>
+
+						<div id="education"><h3><i class="fa fa-graduation-cap"></i> Education</h3>
+							<table class="education text-center" id="education_table">
+							<tr>
+								<th>Degree Title</th>
+								<th>Institute</th>
+								<th>City</th>
+								<th>Passing Year</th>
+								<th>Total Marks</th>
+								<th>Marks Obtained</th>
+							</tr>
+						</table>
+						<button class="add_education" type="button" onclick="AddEducation()">Add New Education</button></div>
+
+						<div id="experience"><h3><i class="fa fa-certificate"></i> Experience</h3>
+						<table class="experience text-center" id="experience_table">
+							<tr>
+								<th>Institute</th>
+								<th>Position</th>
+								<th>City</th>
+								<th>Duration</th>
+								<th>Responsibilities</th>
+							</tr>
+						</table>
+						<button class="add_experience" type="button" onclick="AddExperience()">Add New Experience</button></div>
+						
+						<div><h3><i class="fa fa-user-tie"></i> Professional Summary</h3>
+							<textarea class="inputblock" name="summary" value="" rows="7" placeholder="Enter your Professional Summary" required></textarea></div>
+						
+						<div><h3><i class="fa fa-camera"></i> Picture</h3>
+							<input type="file" name="image" class="file_upload" required></div>
+						
+						<div><h3><i class="fa fa-user-friends"></i> References</h3>
+							<div class="row">
+								<div class="col-md-6 text-center">
+								<h5>Reference 1</h5>
+								<input type="text" class="input" name="refer_name" value="" placeholder="Full Name">
+								<input type="text" class="input" name="refer_title" value="" placeholder="Title e.g. Assistant Professor">
+								<input type="text" class="input" name="refer_institute" value="" placeholder="Institute">
+								<input type="email" class="input" name="refer_email" value="" placeholder="Email">
+								<input type="tel" class="input" name="refer_phone" value="" placeholder="Contact Number">
+							</div>
+
+							<div class="col-md-6 text-center">
+								<h5>Reference 2</h5>
+								<input type="text" class="input" name="refer_name2" value="" placeholder="Full Name">
+								<input type="text" class="input" name="refer_title2" value="" placeholder="Title e.g. Assistant Professor">
+								<input type="text" class="input" name="refer_institute2" value="" placeholder="Institute">
+								<input type="email" class="input" name="refer_email2" value="" placeholder="Email">
+								<input type="tel" class="input" name="refer_phone2" value="" placeholder="Contact Number">
+							</div>
+							</div>
+						</div>
+						<button type="submit" class="create_cv">Create CV</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="text-center">
+	<p>Developed by Zain Ul Abidin BS-CS 6th</p>
+	<p><i class="fa fa-copyright"></i> 2020. All Rights Reserved.</p>
+</footer>
+<script type="text/javascript" src="main.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</body>
+</html>

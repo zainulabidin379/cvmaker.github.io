@@ -1,0 +1,216 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	font-family: georgia, "Times New Roman", Times, Serif;
+}
+
+header{
+  background: #109170;
+  width: 100%;
+  position: fixed;
+  z-index: 5!important;
+  top: 0;
+}
+
+#header h1{
+	font-size: 15vh;
+	color: #efefef;
+	text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+/*----------------------------------------NavigationBar---------------------------------------------*/
+.nav {
+  height: 30px;
+  width: 100%;
+  top: 17vh;
+  z-index: 5!important;
+  background: #1abc9c;
+  position: fixed;
+}
+
+.nav .nav-header {
+  display: inline;
+}
+
+.nav .nav-btn {
+  display: none;
+}
+
+.nav .nav-links {
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.nav .nav-links-left {
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav .nav-links  a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #efefef;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+
+.nav .nav-links-left  a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #efefef;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+
+.nav .nav-links a:hover{
+  background: #109170;
+}
+
+.nav .nav-links-left a:hover{
+  background: #109170;
+}
+
+.nav #nav-check {
+  display: none;
+}
+
+@media (max-width:768px) {
+  .nav .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+  }
+  .nav .nav-btn > label {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    right: 10px;
+    padding-left: 8px;
+    padding-top: 6px;
+  }
+  .nav .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 8px;
+    border-top: 2px solid #eee;
+  }
+  .nav .nav-links {
+    position: absolute;
+    display: block;
+    vertical-align: middle;
+    width: 200px;
+    background-color: #333;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 30px;
+    right: 0px;
+  }
+  .nav .nav-links a{
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+
+  .nav .nav-links-left{
+  	padding-right: 50px;
+  }
+
+  .nav #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+  }
+}
+
+/*----------------------------------------CV Container---------------------------------------------*/
+.cv_container{
+  top: 25vh;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.cv_container .col-md-4{
+  background: darkgrey;
+}
+
+.col-md-4 img{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.col-md-8{
+  width: 100%;
+  background: #FBFCFC;
+}
+.cv_container hr{
+  background-color: black;
+}
+.col-md-4 hr{
+  margin-top: -3px;
+  color: black;
+}
+
+.Naming_sect{
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.col-md-8 hr{
+  margin-top: -8px;
+}
+
+.col-md-8 h3{
+  margin-top: 15px;
+}
+
+.col-md-8 h6{
+  font-weight: 600;
+}
+
+.col-md-8 .alligned_line{
+  display: inline;
+  line-height: 0;
+}
+
+.col-md-8 .w_exp{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.col-md-8 .education_line{
+  margin-bottom: 20px;
+}
+
+/*---------------------Footer---------------------*/
+footer{
+  background: #1abc9c;
+  clear: both;
+  margin-top: 30vh;
+}
+
+footer p{
+  font-size: 17px;
+  color: #efefef;
+  margin-top: 20px;
+}
+footer i{
+  font-size: 15px;
+}
